@@ -7,7 +7,8 @@ height_in_centimeters = float(input("Height (cm): "))
 height_in_meters = float(height_in_centimeters) / 100
 BMI = float(weight_in_kilograms / height_in_meters ** 2)
 
-print("Name: {} Weight: {:.2f} Height [meters]: {:.2f} BMI: {:.2f} ".format(name, weight_in_kilograms, height_in_meters, BMI))
+print("Name: {} Weight: {:.2f} Height [meters]: {:.2f} BMI: {:.2f} ".format(name, weight_in_kilograms, height_in_meters,
+                                                                            BMI))
 
 print("\n----Task 2---- Leetspeak Converter")
 
@@ -27,7 +28,8 @@ start = str.upper()[middle_character:]
 end = str.upper()[0:middle_character]
 flipped_str = start + "|" + end
 
-print(f"This string is {length_of_the_string} characters long. The middle character is \'{str[middle_character]}\'\nFlipped String\n{flipped_str}")
+print(
+    f"This string is {length_of_the_string} characters long. The middle character is \'{str[middle_character]}\'\nFlipped String\n{flipped_str}")
 
 print("\n----Task 4---- Multiple numbers")
 
