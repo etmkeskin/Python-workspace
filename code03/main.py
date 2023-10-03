@@ -7,10 +7,6 @@ from utilities import SeaLife
 
 # import the approriate items from utilities.py and other modules may you require
 
-def task0():
-    print("Name: Ibrahim Etem Keskin\nStudent ID: 219076074\nemail: etmkeskin@outlook.com\nSection A")
-
-
 def task1():
     flag = True
     while flag:
@@ -129,8 +125,6 @@ def task4():
 
 
 def main():
-    print("\n--------- Task0: Submission Info       ------------")
-    task0()
     print("\n--------- Task1: Rock, Paper, Scissors ------------")
     task1()
     print("\n--------- Task2: Swap List Elements    ------------")
