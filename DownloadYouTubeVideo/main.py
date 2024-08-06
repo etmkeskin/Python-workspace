@@ -1,28 +1,30 @@
 from pytube import YouTube
+from pytube.exceptions import VideoUnavailable, RegexMatchError
 
 
-def download_youtube_video(url, save_path):
+def download_youtube_video(url, path):
     try:
-        # Create a YouTube object
+        print("Creating YouTube object...")
         yt = YouTube(url)
+        print(f"Title: {yt.title}")
 
-        # Get the highest resolution stream available
+        print("Getting highest resolution stream...")
         stream = yt.streams.get_highest_resolution()
 
-        # Download the video to the specified path
+        print("Downloading video...")
         stream.download(save_path)
 
         print(f"Video downloaded successfully: {yt.title}")
+    except VideoUnavailable:
+        print("Error: The video is unavailable.")
+    except RegexMatchError:
+        print("Error: The video URL is incorrect.")
     except Exception as e:
-        print(f"An error occurred: {e}")
+        print(f"An unexpected error occurred: {e}")
 
 
 if __name__ == "__main__":
-    # URL of the YouTube video to download
-    video_url = "https://www.youtube.com/watch?v=9PN_cHPwaGY&pp=ygURZmVuZXJiYWjDp2UgbGlsbGU%3D"
-
-    # Path to save the downloaded video
+    video_url = "https://www.youtube.com/watch?v=6gTmyhRM6k0&t=2s"
     save_path = "C:\\Users\\etmke\\Downloads"
 
-    # Download the video
     download_youtube_video(video_url, save_path)
